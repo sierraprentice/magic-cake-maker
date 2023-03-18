@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTC-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Cake Maker</title>
+    <script
+      src="https://kit.fontawesome.com/1e679c4483.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      :root {
+        --nav-height: 225px;
+      }
+      * {
+        box-sizing: border-box;
+        font-family: "Lato";
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 5px;
+      }
+
+      nav li {
+        list-style: none;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        height: var(--nav-height);
+        width: 100%;
+      }
+
+      #nav-bar {
+        background: #ccffff;
+        padding: 8px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+      }
+
+      #nav-bar a {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      #nav-bar a:hover {
+        color: #ff80ff;
+      }
+
+      .intro {
+        text-align: center;
+        font-size: 1.1rem;
+        max-width: 850px;
+        margin: auto;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      #email {
+        width: 200px;
+      }
+
+      .bod {
+        text-align: center;
+        max-width: 700px;
+        margin: var(--nav-height) auto 0;
+      }
+
+      #header-img {
+        display: none;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 0;
+      }
+
+      .pricing {
+        display: flex;
+        gap: 10px;
+      }
+
+      .pricing div {
+        background: #ccffff;
+        padding: 5px 20px;
+        flex: 0 0 33.33%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+      }
+
+      #button:hover {
+        background-color: #ffe6ff;
+      }
+
+      #button {
+        position: absolute;
+        top: calc(100% + 10px);
+      }
+
+      @media (max-width: 900px) {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 750px) {
+        header {
+          position: static;
+          height: auto;
+        }
+        .bod {
+          margin-top: 0;
+        }
+        #nav-bar {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      #nav-bar {
+        position: fixed;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <nav id="nav-bar">
+        <img
+          id="header-img"
+          class="fa-solid fa-cake-candles"
+          src="https://kit.fontawesome.com/1e679c4483.js"
+          crossorigin="anonymous"
+        />
+        <h1 class="product-name">
+          <i class="fa-solid fa-cake-candles"></i> Magic Cake Maker
+        </h1>
+        <ul>
+          <li>
+            <i class="fa-solid fa-kitchen-set"></i>
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-cookie-bite"></i
+            ><a class="nav-link" href="#cakes">Cakes</a>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-dollar-sign"></i>
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <p class="intro">
+          Have you ever wished that you could bake professional quality cakes
+          but don't have the skillset or just don't have the time? The Magic
+          Cake Maker will fix that! Just choose your ingredients and pick out
+          what you want your cake to look like out of our cake catalog, which
+          contains over 300 designs! Press the bake button and your Magic Cake
+          Maker will do all the rest!
+        </p>
+      </div>
+    </header>
+    <div class="bod">
+      <section id="early-access">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <h2>
+            Enter your email to preorder and receive your Magic Cake Maker
+            before its offical release date!
+          </h2>
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            id="email"
+            name="email"
+          />
+          <input type="submit" id="submit" />
+        </form>
+      </section>
+      <div id="features">
+        <section id="quality-cakes">
+          <div class="grid">
+            <div class="icon"></div>
+            <div class="description">
+              <h3>Quality Cakes</h3>
+              <p>
+                The Magic Cake Maker will create professional quality cakes with
+                over 300 design options and 15 cake flavors! All you have to do
+                is add the necessary ingredients into the machine and push a
+                button!
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="cakes">
+          <div class="grid">
+            <div class="icon"></div>
+            <div class="description">
+              <h3>Bake Professional Cakes</h3>
+              <p>
+                Check out our cake catelog <a href="">here</a>! Some of our cake
+                flavors include German chocolate, funfetti, red velvet, and many
+                more! Have you seen a cake design go viral? Good chance it's
+                available in our catelog! Even new designs are added in periodic
+                system updates!
+              </p>
+            </div>
+          </div>
+        </section>
+        <div class="video">
+          <iframe
+            id="video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/cthskydPLgI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <section id="pricing">
+          <div class="grid">
+            <div class="icon"></div>
+            <div class="description">
+              <h3>Pricing</h3>
+              <div class="pricing">
+                <div>
+                  One payment of $9,999
+                  <button id="button">Select</button>
+                </div>
+
+                <div>
+                  Twelve monthly installment payments of $833.25
+                  <button id="button">Select</button>
+                </div>
+                <div>
+                  Thirty-six monthly installment payments of $277.75<button
+                    id="button"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
